@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonasController;
-
+use App\Http\Controllers\ContactoController;
 // Ruta para la vista principal
 Route::view('/', 'home')->name('home');
 
@@ -18,3 +18,5 @@ Route::patch('personas/{nPerCodigo}', 'App\Http\Controllers\PersonasController@u
 Route::post('personas', 'App\Http\Controllers\PersonasController@store')->name('personas.store');
 Route::get('personas/{nPerCodigo}', 'App\Http\Controllers\PersonasController@show')->name('personas.show');
 Route::delete('personas/{nPerCodigo}', 'App\Http\Controllers\PersonasController@destroy')->name('personas.destroy');
+
+Route::post('contacto', 'App\Http\Controllers\ContactoController@store')->name('contacto.store');
